@@ -1,18 +1,18 @@
-#ifndef ECHIPA_H
-#define ECHIPA_H
+#ifndef ECHIPA_HPP
+#define ECHIPA_HPP
 
 #include <cstddef>
 #include <string>
 
 class Echipa {
 private:
-    const std::string nume;   // const, so it can only be set in the init list
-    std::string* jucatori;    // players array, allocated on the heap
-    std::size_t nrJucatori;
-    std::size_t capacitate;
+    const std::string nume_;   // const, so it can only be set in the init list
+    std::string* jucatori_;    // players array, allocated on the heap
+    std::size_t nrJucatori_;
+    std::size_t capacitate_;
 
 public:
-    Echipa(const std::string& numeEchipa, std::size_t cap);
+    Echipa(const std::string& nume, std::size_t capacitate);
     ~Echipa();
 
     Echipa(const Echipa& other);        // copy constructor

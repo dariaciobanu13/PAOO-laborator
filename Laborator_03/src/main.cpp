@@ -1,4 +1,4 @@
-#include "echipa.h"
+#include "echipa.hpp"
 
 #include <iostream>
 #include <utility>
@@ -24,12 +24,12 @@ int main()
     echipa.adaugaJucator("Ionescu");
     echipa.adaugaJucator("Georgescu");
     echipa.adaugaJucator("Marinescu");   // rejected, team is full
-    // echipa.nrJucatori = 100;          // doesn't compile, nrJucatori is private
+    // echipa.nrJucatori_ = 100;         // doesn't compile, nrJucatori_ is private
     std::cout << "  number of players (from getter): " << echipa.getNrJucatori() << "\n";
     echipa.afiseaza();
 
     titlu("3. Member initialization in the constructor");
-    // nume is const, so it can't be assigned in the constructor body,
+    // nume_ is const, so it can't be assigned in the constructor body,
     // it has to go in the initializer list
     std::cout << "  team name (const member): " << echipa.getNume() << "\n";
 

@@ -1,4 +1,4 @@
-#include "greseli.h"
+#include "greseli.hpp"
 
 #include <iostream>
 #include <string>
